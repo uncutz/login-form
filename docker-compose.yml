@@ -15,7 +15,7 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www/html
     volumes:
-      - ./public/:/var/www/html
+      - ./:/var/www/html
       - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - labnet
@@ -29,7 +29,7 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - ./public/:/var/www/html
+      - ./:/var/www/html
       - ./config/conf.d/:/etc/nginx/conf.d/
     networks:
       - labnet
