@@ -15,7 +15,7 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www/html
     volumes:
-      - ./code/:/var/www/html
+      - ./public/:/var/www/html
       - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - labnet
@@ -29,12 +29,32 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - ./code/:/var/www/html
+      - ./public/:/var/www/html
       - ./config/conf.d/:/etc/nginx/conf.d/
     networks:
       - labnet
 
-#Docker Networks
+  localhost:
+    platform: linux/x86_64
+    image: mysql
+    command: [ '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8083:80"
+    environment:
+      - PMA_HOST=localhost
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+
+      #Docker Networks
 networks:
   labnet: 
     external:
