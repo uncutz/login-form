@@ -1,5 +1,6 @@
 # Set master image
 FROM php:7.4-fpm-alpine
+#Attention! : with alpine base image, you have to use apk instead of apt
 
 # Set working directory
 WORKDIR /var/www/html
