@@ -24,6 +24,10 @@ RUN apk update && apk add --no-cache \
     php7-dom \
     php7-session \
     php7-zlib
+# Add xdebug
+RUN apk add --no-cache $PHPIZE_DEPS \
+    && pecl install xdebug-2.9.0 \
+    && docker-php-ext-enable xdebug
 
 # Add and Enable PHP-PDO Extenstions
 RUN docker-php-ext-install pdo pdo_mysql mysqli
