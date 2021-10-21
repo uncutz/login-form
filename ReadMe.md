@@ -1,3 +1,9 @@
+```
+NGINX 8082
+PMA 8083
+DB 3360
+```
+
 install image for the first time:
 
 1. create a network, that all our containers will be visible by each other
