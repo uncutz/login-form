@@ -1,3 +1,4 @@
 /vendor/
-/.docker/mariadb
 .idea
+/.docker/
+docker-compose.yml
