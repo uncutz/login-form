@@ -17,9 +17,15 @@
         <input id="email" type="text" placeholder="Email">
         <input id="password" type="password" placeholder="Password">
         <a href="#">Forgot Password?</a>
-        <button>Login</button>
+        <button type="submit">Login</button>
         <p>Not a member? <a href="/userSignUp.php">Signup now</a></p>
     </div>
 </section>
+
+<script type="module">
+    import Login from "./js/Login.js";
+
+    Login();
+</script>
 </body>
 </html>

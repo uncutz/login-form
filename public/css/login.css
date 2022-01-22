@@ -23,6 +23,7 @@ section.login-section div.login-form input {
   text-align: center;
 }
 section.login-section div.login-form button {
+  cursor: pointer;
   margin: 1em auto;
   display: block;
   height: 2.5em;
