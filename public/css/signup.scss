@@ -1,0 +1,40 @@
+section.signup-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div.signup-form {
+    width: clamp(300px, 50%, 600px);
+    height: auto;
+    padding: 3em 1em;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+    input {
+      display: block;
+      margin: 1em auto;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1px solid #a8a8a8;
+      height: 2em;
+      width: 60%;
+      text-align: center;
+    }
+
+
+    button {
+      margin: 1em auto;
+      display: block;
+      height: 2.5em;
+      font-size: 1.2rem;
+      width: 50%;
+      border: none;
+      background-color: #3939d0;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
